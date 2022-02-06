@@ -1,4 +1,4 @@
-# Basic nginx dockerfile starting with Ubuntu 20.04
+# Basic dockerfile starting with Ubuntu 20.04
 FROM ubuntu:20.04
 RUN apt-get -y update
-RUN apt-get -y install busybox
+RUN apt-get -y install redis
