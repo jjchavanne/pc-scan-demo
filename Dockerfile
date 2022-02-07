@@ -1,4 +1,6 @@
-# Basic dockerfile starting with Ubuntu 20.04
-FROM ubuntu:20.04
-RUN apt-get -y update
-RUN apt-get -y install nginx
+FROM python:3.8-alpine
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+CMD ["python", "app.py"]
