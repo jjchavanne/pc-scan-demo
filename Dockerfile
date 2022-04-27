@@ -3,9 +3,9 @@ ARG USERNAME=ubuntu
 
 # Create the user
 RUN adduser -h /home/username -S -s /bin/bash $USERNAME
-USER $USERNAME
 RUN mkdir /app
 ADD . /app
 WORKDIR /app
+USER $USERNAME
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
