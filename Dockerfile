@@ -2,7 +2,7 @@ FROM python:3.8-alpine
 ARG USERNAME=ubuntu
 
 # Create the user
-RUN adduser -d /home/username -m -s /bin/bash $USERNAME
+RUN adduser -h /home/username -S -s /bin/bash $USERNAME
 USER $USERNAME
 RUN mkdir /app
 ADD . /app
